@@ -1,23 +1,20 @@
 #include <iostream>
-#include "card.h"
+#include "card.hpp"
 
 using namespace std;
 
-void Card::Card (){
-   suit = 3;
-   rank = 4;
+char card::get_suit() const {
+	return suit;
 }
-char Card::suits (void){
-   if (suit == 1){
-      return 'H';
-   }
-   else if (suit == 2){
-      return 'S';
-   }
-   else if (suit == 3){
-      return 'C';
-   }
-   else if (suit == 4){
-      return 'D';
-   }
-  }
+
+int card::get_rank() const {
+	return rank;
+}
+
+void card::set_suit(char new_suit) {
+	suit = new_suit;
+}
+
+void card::set_rank(int new_rank) {
+	rank = new_rank;
+}
